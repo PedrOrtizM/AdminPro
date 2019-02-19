@@ -13,6 +13,10 @@ import { ProgressComponent } from './progress/progress.component';
 
 //Rutas
 import { PagesRoutingModule } from './pages.routes';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+
+import { FormsModule }  from '@angular/forms'
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 
 
@@ -21,11 +25,14 @@ import { PagesRoutingModule } from './pages.routes';
     Graficas1Component,   
     DashboardComponent,
     ProgressComponent,
-    PagesComponent 
+    PagesComponent ,
+    IncrementadorComponent
   ],
   imports: [
     SharedModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FormsModule,
+    ChartsModule
   ],
   exports:[
     Graficas1Component,   
