@@ -1,0 +1,8 @@
+
+<div *ngIf="data" style="display: block">
+        <canvas baseChart
+                    [data]="data.data"
+                    [labels]="data.labels"
+                    [chartType]="data.type"
+                 ></canvas>
+</div>

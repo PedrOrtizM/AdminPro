@@ -17,6 +17,9 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 
 import { FormsModule }  from '@angular/forms'
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { GraficaDonaComponent } from '../components/grafica-dona/grafica-dona.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -26,13 +29,16 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     DashboardComponent,
     ProgressComponent,
     PagesComponent ,
-    IncrementadorComponent
+    IncrementadorComponent,
+    GraficaDonaComponent
   ],
   imports: [
     SharedModule,
     PagesRoutingModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    BrowserModule,
+    CommonModule
   ],
   exports:[
     Graficas1Component,   
