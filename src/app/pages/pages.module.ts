@@ -20,6 +20,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { GraficaDonaComponent } from '../components/grafica-dona/grafica-dona.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 
@@ -30,7 +31,8 @@ import { CommonModule } from '@angular/common';
     ProgressComponent,
     PagesComponent ,
     IncrementadorComponent,
-    GraficaDonaComponent
+    GraficaDonaComponent,
+    AccountSettingsComponent
   ],
   imports: [
     SharedModule,
