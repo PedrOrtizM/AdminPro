@@ -5,8 +5,18 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 
+//router
+import { RouterModule } from '@angular/router';
+
+
+// Directivas comunes
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
+  
+  imports:[RouterModule,CommonModule],
+
   declarations: [
     HeaderComponent,
     SidebarComponent,

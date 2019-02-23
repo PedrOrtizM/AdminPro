@@ -1,9 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SettingsService {
 
   ajustes:Ajustes ={
@@ -22,8 +20,6 @@ export class SettingsService {
 
     // guardamos en el localStorage los ajustes en fomato string ( LS solo alcena strings)
     localStorage.setItem('ajustes',JSON.stringify( this.ajustes ))
-
-    console.log("Guardado tema en el LocalStorage");
     
 
   }
@@ -31,12 +27,12 @@ export class SettingsService {
   cargarAjustes(){
 
     if ( localStorage.getItem( 'ajustes' )  ){
+      
       this.ajustes = JSON.parse( localStorage.getItem('ajustes'));
-      console.log("cargando del local storage");
+   
       this.aplicarTema( this.ajustes.tema );
       
     }else{
-      console.log("usando valores por defecto");
       this.aplicarTema( this.ajustes.tema );
     }
 
@@ -44,13 +40,15 @@ export class SettingsService {
   
   aplicarTema( tema:string ){
 
+    // url para cambiar el tema de la plantilla
     let url = `assets/css/colors/${ tema }.css`;
+
     // obtiene el elemento con id theme en index.html y le pone el atributo url a href
     this._document.getElementById('theme').setAttribute('href',url)
    
   
 
-    // Mandamos al servicio el tema y url y guardamos en el localStorage
+    // Asignamos a la vatriable ajuste los nuevos temas
     this.ajustes.tema = tema;
     this.ajustes.temaUrl = url;
     this.guardarAjustes();
@@ -59,6 +57,7 @@ export class SettingsService {
 
 
 
+  // Interface para controlar los ajustes
 interface Ajustes{
   temaUrl: string;
   tema:string;

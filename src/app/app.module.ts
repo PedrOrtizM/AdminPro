@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
 
 
+
 //Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register/register.component';
 
 
-
+// Servicios
+import { ServiceModule } from './services/service.module';
 
 //Rutas
 import { AppRoutingModule } from './app.routes';
@@ -29,7 +31,8 @@ import { AppRoutingModule } from './app.routes';
   imports: [
     BrowserModule,
     PagesModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
