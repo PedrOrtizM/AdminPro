@@ -21,6 +21,8 @@ import { GraficaDonaComponent } from '../components/grafica-dona/grafica-dona.co
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 
@@ -32,7 +34,9 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     PagesComponent ,
     IncrementadorComponent,
     GraficaDonaComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent
   ],
   imports: [
     SharedModule,
